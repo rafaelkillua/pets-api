@@ -47,8 +47,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
-      // adapter: 'sails-mysql',
-      // url: 'mysql://user:password@host:port/database',
+      adapter: 'sails-mongo',
+      url: process.env.MONGODB_URI,
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
@@ -118,7 +118,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   blueprints: {
-    shortcuts: false,
+    // shortcuts: false,
   },
 
 
@@ -371,8 +371,8 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://example.com',
-    internalEmailAddress: 'support@example.com',
+    // baseUrl: 'https://example.com',
+    // internalEmailAddress: 'support@example.com',
 
     // mailgunDomain: 'mg.example.com',
     // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',
@@ -393,4 +393,4 @@ module.exports = {
 
 
 
-};
+}
