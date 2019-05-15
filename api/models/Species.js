@@ -5,10 +5,9 @@ module.exports = {
       required: true
     },
 
-    race: {
-      type: 'string',
-      required: true
-    }
+    createdAt: false,
+
+    updatedAt: false
   }
 }
 

@@ -43,7 +43,7 @@ module.exports.routes = {
   'patch /pet/update': 'pet/update',
   'post /pet/uploadImages': 'pet/upload-images',
 
-  // CITY, STATE AND  ROUTES
+  // CITY, STATE AND SPECIES ROUTES
   'get /city': 'city/find',
   'get /state': 'state/find',
   'get /species': 'species/find',

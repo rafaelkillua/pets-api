@@ -15,6 +15,11 @@ module.exports = {
       required: true
     },
 
+    race: {
+      type: 'string',
+      required: true
+    },
+
     gender: {
       type: 'string',
       isIn: ['male', 'female'],

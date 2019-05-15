@@ -33,6 +33,5 @@ module.exports.policies = {
   // CITY, STATE AND SPECIES POLICIES
   'city/find': true,
   'state/find': true,
-  'species/find': 'isLogged',
-  'species/create': 'isAdmin'
+  'species/find': 'isLogged'
 }
