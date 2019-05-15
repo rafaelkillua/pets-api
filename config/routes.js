@@ -35,33 +35,8 @@ module.exports.routes = {
   // USER ROUTES
   'post /login': 'user/login',
   'post /signup': 'user/signup',
-  'get /user': 'user/find',
-  'get /user/:id': 'user/findone',
-  'patch /user/:id': 'user/update',
-  'get /user/dashboard': 'user/dashboard',
-  'get /user/sync': 'user/sync',
-  'post /forgotPassword': 'user/forgot-password',
-  'post /updatePassword': 'user/update-password',
-  'get /myPlaceSolicitations': 'user/my-place-solicitations',
-
-  // PLACE ROUTES
-  'post /place/create': 'place/create',
-  'get /place': 'place/find',
-  'get /place/:id': 'place/findone',
-  'patch /place/:id': 'place/update',
-  'post /place/:id/uploadImages': 'place/upload-images',
-
-  // PLACE SOLICITATION ROUTES
-  'post /placeSolicitation/create': 'placeSolicitation/create',
-  'get /placeSolicitation': 'placeSolicitation/find',
-  'get /placeSolicitation/:id': 'placeSolicitation/findone',
-  'patch /placeSolicitation/:id': 'placeSolicitation/update',
-  'get /placeSolicitation/:id/generateSuggestions': 'placeSolicitation/generate-suggestions',
-  'post /placeSolicitation/:id/suggest': 'placeSolicitation/suggest',
-  'post /placeSolicitation/:id/selectSuggestion': 'placeSolicitation/select-suggestion',
 
   // CITY, STATE AND PLACETYPE ROUTES
   'get /city': 'city/find',
-  'get /state': 'state/find',
-  'get /placeType': 'placeType/find'
+  'get /state': 'state/find'
 }

@@ -1,8 +1,13 @@
 module.exports = async function (req, res, proceed) {
   if (req.headers && req.headers.authorization) {
-    const userDecoded = await sails.helpers.jwt
-      .verify(req.headers.authorization, process.env.JWT_SECRET)
-      .intercept('tokenExpiredError', 'forbidden')
+    let userDecoded
+
+    try {
+      userDecoded = await sails.helpers.jwt
+        .verify(req.headers.authorization, process.env.JWT_SECRET)
+    } catch (unused) {
+      return res.forbidden()
+    }
 
     if (!userDecoded.iss) {
       return res.forbidden()

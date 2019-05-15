@@ -15,6 +15,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
     const secret = process.env.JWT_SECRET
+    console.log(secret)
     const exp = 86400
 
     const { user } = inputs
