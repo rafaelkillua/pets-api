@@ -35,8 +35,17 @@ module.exports.routes = {
   // USER ROUTES
   'post /login': 'user/login',
   'post /signup': 'user/signup',
+  'get /user/sync': 'user/sync',
 
-  // CITY, STATE AND PLACETYPE ROUTES
+  // PET ROUTES
+  'get /pets': 'pet/find',
+  'post /pet/create': 'pet/create',
+  'patch /pet/update': 'pet/update',
+  'post /pet/uploadImages': 'pet/upload-images',
+
+  // CITY, STATE AND  ROUTES
   'get /city': 'city/find',
-  'get /state': 'state/find'
+  'get /state': 'state/find',
+  'get /species': 'species/find',
+  'post /species/create': 'species/create'
 }

@@ -22,8 +22,17 @@ module.exports.policies = {
   //USER POLICIES
   'user/login': true,
   'user/signup': true,
+  'user/sync': 'isLogged',
 
-  // ETC POLICIES
+  // PET ROUTES
+  'pet/find': true,
+  'pet/create': 'isLogged',
+  'pet/update': 'isLogged',
+  'pet/upload-images': 'isLogged',
+
+  // CITY, STATE AND SPECIES POLICIES
   'city/find': true,
   'state/find': true,
+  'species/find': 'isLogged',
+  'species/create': 'isAdmin'
 }

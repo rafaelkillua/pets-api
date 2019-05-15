@@ -13,10 +13,6 @@ module.exports = {
     city: {
       model: 'city',
       required: true
-    },
-
-    coordinates: {
-      type: 'json'
     }
   }
 }

@@ -6,10 +6,12 @@ module.exports = async function (req, res, proceed) {
       userDecoded = await sails.helpers.jwt
         .verify(req.headers.authorization, process.env.JWT_SECRET)
     } catch (unused) {
+      console.log('1')
       return res.forbidden()
     }
 
     if (!userDecoded.iss) {
+      console.log('2')
       return res.forbidden()
     }
 
@@ -17,16 +19,17 @@ module.exports = async function (req, res, proceed) {
 
     if (
       user &&
-      userDecoded.accessLevel === user.accessLevel &&
       user.status === 'activated'
     ) {
       req.sender = user
       delete req.sender.password
       return proceed()
     } else {
+      console.log('3')
       return res.forbidden()
     }
   } else {
+    console.log('4')
     return res.forbidden()
   }
 }

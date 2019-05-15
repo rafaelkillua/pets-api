@@ -29,7 +29,7 @@ module.exports = {
           secret: process.env.CLOUDINARY_SECRET,
           cloudName: process.env.CLOUDINARY_NAME,
           uploadOptions: {
-            folder: `${object}/${id}`,
+            folder: `pets/${object}/${id}`,
             'resource_type': 'image',
             maxTimeToBuffer: 4500,
             eager: [
