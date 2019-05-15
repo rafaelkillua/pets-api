@@ -49,8 +49,6 @@ module.exports = {
       .skip(page * rowsPerPage)
       .sort('createdAt DESC')
 
-    console.log('aaa', results)
-
     results = await Promise.all(results.map(pet => sails.helpers.pet.deepPopulateById(pet.id)))
 
     results = await sails.helpers.setResultsMeta.with({
