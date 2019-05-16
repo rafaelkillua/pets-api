@@ -23,6 +23,7 @@ module.exports.policies = {
   'user/login': true,
   'user/signup': true,
   'user/sync': 'isLogged',
+  'user/my-pets': 'isLogged',
 
   // PET ROUTES
   'pet/find': true,

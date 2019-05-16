@@ -95,6 +95,8 @@ module.exports = {
       address: address.id
     }).fetch()
 
+    await User.addToCollection(this.req.sender.id, 'myPets').members(pet.id)
+
     return exits.success(pet)
   }
 }

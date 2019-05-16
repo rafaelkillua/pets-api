@@ -36,6 +36,7 @@ module.exports.routes = {
   'post /login': 'user/login',
   'post /signup': 'user/signup',
   'get /user/sync': 'user/sync',
+  'get /myPets': 'user/my-pets',
 
   // PET ROUTES
   'get /pets': 'pet/find',
