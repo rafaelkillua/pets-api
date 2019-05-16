@@ -42,7 +42,7 @@ module.exports.routes = {
   'get /pets': 'pet/find',
   'post /pet/create': 'pet/create',
   'patch /pet/update': 'pet/update',
-  'post /pet/uploadImages': 'pet/upload-images',
+  'post /pet/:id/uploadImages': 'pet/upload-images',
 
   // CITY, STATE AND SPECIES ROUTES
   'get /city': 'city/find',
