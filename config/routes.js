@@ -36,12 +36,13 @@ module.exports.routes = {
   'post /login': 'user/login',
   'post /signup': 'user/signup',
   'get /user/sync': 'user/sync',
+  'patch /user/:id': 'user/update',
   'get /myPets': 'user/my-pets',
 
   // PET ROUTES
   'get /pets': 'pet/find',
   'post /pet/create': 'pet/create',
-  'patch /pet/update': 'pet/update',
+  'patch /pet/:id': 'pet/update',
   'post /pet/:id/uploadImages': 'pet/upload-images',
 
   // CITY, STATE AND SPECIES ROUTES

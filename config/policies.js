@@ -24,6 +24,7 @@ module.exports.policies = {
   'user/signup': true,
   'user/sync': 'isLogged',
   'user/my-pets': 'isLogged',
+  'user/update': 'isLogged',
 
   // PET ROUTES
   'pet/find': true,
